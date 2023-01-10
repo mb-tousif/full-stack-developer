@@ -1,18 +1,15 @@
 import React from 'react'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 import Meta from '../components/Meta'
-import Navbar from '../components/Navbar'
 
-interface layoutProps {
-    children: JSX.Element,
-}
 
-export default function RootLayout({children}:layoutProps) {
+export default function RootLayout({children}) {
   return (
     <html lang="en">
       <Meta/>
       <body>
-      <Navbar/>
+      <Header/>
         <main>{children}</main>
       <Footer/>
       </body>
