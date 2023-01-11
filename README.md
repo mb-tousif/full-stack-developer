@@ -12,14 +12,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Technology
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `app/api/hello.js`.
-
-## Learn More
-
--- Project Description will add after completion of project
-
-## Deploy on Vercel
-
-**Thank you for your interest**
+** Coming soon....**

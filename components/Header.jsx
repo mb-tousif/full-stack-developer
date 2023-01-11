@@ -1,38 +1,25 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React,{useState} from 'react'
 import { AppBar,IconButton, Box,Menu,MenuItem, Stack, Container,Typography,Toolbar } from '@mui/material'
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from 'next/link';
 
-// const Image = styled("img")(({ theme }) => ({
-//   width: "15%",
-//   height: 64,
-//   borderRadius: 10,
-//   margin: "5px 20px",
-//   [theme.breakpoints.down("md")]: {
-//     display: "none"
-//   },
-// }));
-
-export default function Header() {
-    const [anchorElNav, setAnchorElNav] = useState(null);
-
+export default function Header (){
+    const [anchorElNav, setAnchorElNav] = useState(false);
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    
+    }; 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
+        setAnchorElNav(false);
     };
   return (
     <AppBar
       sx={{
-        backgroundImage: "linear-gradient(to right, #243949 0%, #517fa4 100%)",
+        background: "linear-gradient(90deg, #103783 0%, #7c65a9 100%)",
       }}
       position="static"
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <Image src={logo} alt="Logo" /> */}
           <Typography
             variant="h5"
             noWrap
@@ -47,7 +34,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            Trendy Shop
+            MERN Dev. Tousif
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -61,7 +48,6 @@ export default function Header() {
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
               anchorEl={anchorElNav}
               color="inherit"
               anchorOrigin={{
@@ -76,27 +62,34 @@ export default function Header() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none" }, position: "static"
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/home" style={{ textDecoration: "none" }}>
+                <Link href="/" style={{ textDecoration: "none", color:"#471069" }}>
                   <Typography textAlign="center" fontWeight="700" size="large">
                     Home
                   </Typography>
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/projects" style={{ textDecoration: "none" }}>
+                <Link href="/projects" style={{ textDecoration: "none", color:"#471069" }}>
                   <Typography textAlign="center" fontWeight="700" size="large">
                     Projects
                   </Typography>
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Link to="/about" style={{ textDecoration: "none" }}>
+                <Link href="/about" style={{ textDecoration: "none", color:"#471069" }}>
                   <Typography textAlign="center" fontWeight="700" size="large">
                     About
+                  </Typography>
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link href="/blogs" style={{ textDecoration: "none", color:"#471069" }}>
+                  <Typography textAlign="center" fontWeight="700" size="large">
+                    Blogs
                   </Typography>
                 </Link>
               </MenuItem>
@@ -115,7 +108,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            MERN Dev Tousif
+            MERN Dev. Tousif
           </Typography>
           <Stack
             direction="row"
@@ -130,22 +123,27 @@ export default function Header() {
               },
             }}
           >
-            <Link to="/home" style={{ textDecoration: "none", color: "#fff" }}>
+            <Link href="/" style={{ textDecoration: "none", color: "#fff" }}>
               <Typography textAlign="center" fontWeight="700" size="large">
                 Home
               </Typography>
             </Link>
             <Link
-              to="/projects"
+              href="/projects"
               style={{ textDecoration: "none", color: "#fff" }}
             >
               <Typography textAlign="center" fontWeight="700" size="large">
                 Projects
               </Typography>
             </Link>
-            <Link to="/about" style={{ textDecoration: "none", color: "#fff" }}>
+            <Link href="/about" style={{ textDecoration: "none", color: "#fff" }}>
               <Typography textAlign="center" fontWeight="700" size="large">
                 About
+              </Typography>
+            </Link>
+            <Link href="/blogs" style={{ textDecoration: "none", color: "#fff" }}>
+              <Typography textAlign="center" fontWeight="700" size="large">
+                Blogs
               </Typography>
             </Link>
           </Stack>
@@ -153,4 +151,4 @@ export default function Header() {
       </Container>
     </AppBar>
   )
-}
+};
