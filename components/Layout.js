@@ -1,5 +1,3 @@
-import Head from "next/head";
-import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Meta from "./Meta";
@@ -7,9 +5,7 @@ import Meta from "./Meta";
 export default function Layout({ children }) {
   return (
     <>
-      <Head>
-        <Meta />
-      </Head>
+      <Meta />
       <Header />
       {children}
       <Footer />

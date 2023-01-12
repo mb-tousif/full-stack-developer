@@ -14,7 +14,7 @@ export default function Header (){
   return (
     <AppBar
       sx={{
-        background: "linear-gradient(90deg, #103783 0%, #7c65a9 100%)",
+        background: "linear-gradient(90deg, #103783 0%, #1c1554 50%, #7c65a9 100%)",
       }}
       position="static"
     >
