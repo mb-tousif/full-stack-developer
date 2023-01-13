@@ -121,7 +121,7 @@ export default function Home() {
         </Box>
         <Box
           sx={{
-            background: "#8e6865",
+            backgroundImage: "url('/color-sharp.png')",
             border: "2px solid #074170",
             borderRadius: "20px",
             display: "flex",
