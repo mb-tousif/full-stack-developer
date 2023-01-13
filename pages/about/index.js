@@ -14,26 +14,24 @@ export default function About() {
       }}
     >
       <Box sx={{ margin: "auto", display: {sm:"flex"} }}>
-        <Image className={styles.hero} src={logo} alt="Hero Picture" />
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, x: 300,rotate: -180,duration: 2, scale: 0.5 }}
+        animate={{ opacity: 1, x:0, rotate: 0, scale: 1, duration: 4 }}
         transition={{ duration: 0.5 }}
         style={{
           justifyContent: "center",
           alignItems: "center",
           padding: "1rem",
         }}
-      >
+        >
+        <Image className={styles.hero} src={logo} alt="Hero Picture" />
+        </motion.div>
         <Box sx={{ margin: "auto" }}>
-          <Typography variant="h6">
-            As a web developer, I am confident, enthusiastic, quick learner and
-            want to utilize my knowledge and technical skills to serve a
-            professional organization for my personal and career growth with
-            true dedication, hard work, and commitment.
+          <Typography variant="h5"
+            sx={{ color: "#fff", margin:{ sm:"1rem"}, fontSize: "1.2rem", textAlign: "justify" }}>
+            As a web developer, I have worked on a variety of projects, from small personal projects to large enterprise applications. I have a strong understanding of front-end and back-end development, and I am able to work independently or as part of a team. I am also experienced in creating and managing databases, and I have a good understanding of RESTful API design. I am confident, enthusiastic, quick learner and always eager to learn new technologies and stay current with the latest web development trends.
           </Typography>
         </Box>
-      </motion.div>
       </Box>
     </div>
   );

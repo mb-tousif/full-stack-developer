@@ -4,6 +4,10 @@ import logo from "../public/my.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { BsMedium } from "react-icons/bs";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -26,10 +30,11 @@ export default function Home() {
       }}
     >
       <Box
+        container
         sx={{
           display: {
             sm: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-around"
           },
           padding: {
             xs: "2rem",
@@ -51,6 +56,34 @@ export default function Home() {
             {text}
             <Cursor cursorStyle="✍🏾" />
           </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: "#fff",
+              marginBottom: "1rem",
+              marginRight: { sm: "1rem" },
+              fontSize: "1.2rem",
+              textAlign: "justify",
+            }}
+          >
+            with experience in building scalable and responsive web
+            applications. If you are looking for a skilled MERN stack web
+            developer, please feel free to check my resume and reach at me.
+          </Typography>
+          <div style={{ display: "flex", justifyContent: "space-around", width:"300px", margin:"auto", paddingBottom:"1.5rem" }}>
+            <div>
+              <GitHubIcon />
+            </div>
+            <div>
+              <LinkedInIcon />
+            </div>
+            <div>
+              <BsMedium />
+            </div>
+            <div>
+              <TwitterIcon />
+            </div>
+          </div>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
