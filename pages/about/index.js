@@ -1,13 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Typography, Box, Stack } from "@mui/material";
+import { Typography, Box, Table,TableBody,TableContainer,TableHead, TableRow,Paper, Grid,styled } from "@mui/material";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
 import logo from "../../public/profile.png";
 import signature from "../../public/signature.png";
 import skill from "../../public/skill.png";
+import skill2 from "../../public/hero-3.png";
+import Edu from "../../public/edu.png";
+import Education from "../../public/skills.png";
 import SkillBar from "react-skillbars";
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+    textAlign: "center",
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 16,
+  },
+}));
+
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+    fontSize: 12,
+    textAlign: "center",
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
 export default function About() {
   const skills = [
@@ -118,30 +145,23 @@ export default function About() {
     >
       {/* Hero Section */}
       <Box sx={{ margin: "auto", display: { sm: "flex" } }}>
-        <motion.div
-          initial={{
-            opacity: 0,
-            x: 300,
-            rotate: -180,
-            duration: 2,
-            scale: 0.5,
-          }}
-          animate={{ opacity: 1, x: 0, rotate: 0, scale: 1, duration: 4 }}
-          transition={{ duration: 0.5 }}
-          style={{
-            margin: "auto",
-            padding: "1rem",
-          }}
-        >
-          <Image className={styles.hero} src={logo} alt="Hero Picture" />
-        </motion.div>
         <Box sx={{ margin: "auto" }}>
+          <Typography
+            sx={{
+              color: "#091970",
+              fontSize: { sm: "2.2rem", md: "3rem", xs: "1.6rem" },
+              margin: { sm: "1rem" },
+              textAlign: "left",
+            }}>
+              Yes! I believe <br/>
+              in Continuous Learning
+            </Typography>
           <Typography
             variant="h5"
             sx={{
               color: "#fff",
               margin: { sm: "1rem" },
-              fontSize: "1.2rem",
+              fontSize: { sm: "1rem", md: "1.2rem", xs: ".9rem" },
               textAlign: "justify",
             }}
           >
@@ -164,21 +184,118 @@ export default function About() {
             <Image src={signature} width={200} alt="Signature" />
           </Box>
         </Box>
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 300,
+            rotate: -180,
+            duration: 2,
+            scale: 0.5,
+          }}
+          animate={{ opacity: 1, x: 0, rotate: 0, scale: 1, duration: 4 }}
+          transition={{ duration: 0.5 }}
+          style={{
+            margin: "auto",
+            padding: "1rem",
+          }}
+        >
+          <Image className={styles.hero} src={logo} alt="Hero Picture" />
+        </motion.div>
       </Box>
       <div
         style={{
           height: "6px",
-          background: "#7f0012",
+          background: "linear-gradient(90deg, #e4e7e4 0%, #0a1647 100%)",
           margin: "1rem",
           borderRadius: "10px",
         }}
       ></div>
       {/* Skills Section */}
-      <Box sx={{display:"flex", color: "#fff", justifyContent:"center", alignItems:"center", marginBottom:"1.5rem"}}>
+      <Box
+        sx={{
+          display: "flex",
+          color: "#fff",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: "1.5rem",
+        }}
+      >
         <Typography variant="h4">My Skills</Typography>
         <Image src={skill} height={80} alt="Hero Picture" />
       </Box>
-      <SkillBar skills={skills} />
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={5} md={6} sx={{margin:"auto"}}>
+          <Image src={skill2} height={400} width={"100%"} alt="Hero Picture" />
+        </Grid>
+        <Grid item xs={12} sm={7} md={6}>
+        <SkillBar skills={skills} /> 
+        </Grid>
+      </Grid>
+      <div
+        style={{
+          height: "6px",
+          background: "linear-gradient(90deg,#247a4d 0%, #0c0c0c 100%)",
+          margin: "1.5rem",
+          borderRadius: "10px",
+        }}
+      ></div>
+      <Box
+        sx={{
+          display: "flex",
+          color: "#fff",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <Typography variant="h4">/ Education</Typography>
+        <Image src={Edu} height={80} alt="Hero Picture" />
+      </Box>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={5} md={6} sx={{margin:"auto"}}>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 550 }} aria-label="simple table">
+          <TableHead>
+          <TableRow>
+            <StyledTableCell>Institute</StyledTableCell>
+            <StyledTableCell align="right">Degree</StyledTableCell>
+            <StyledTableCell align="right">Result</StyledTableCell>
+            <StyledTableCell align="right">Out Of</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+            <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                World University of Bangladesh
+              </StyledTableCell>
+              <StyledTableCell align="right">BBA Major in Finance</StyledTableCell>
+              <StyledTableCell align="right">3.26</StyledTableCell>
+              <StyledTableCell align="right">4</StyledTableCell>
+            </StyledTableRow>
+            <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+              Rajshahi Govt. City College
+              </StyledTableCell>
+              <StyledTableCell align="right">HSC</StyledTableCell>
+              <StyledTableCell align="right">3.5</StyledTableCell>
+              <StyledTableCell align="right">5</StyledTableCell>
+            </StyledTableRow>
+            <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                Gunabati Multi-lateral High School
+              </StyledTableCell>
+              <StyledTableCell align="right">SSC</StyledTableCell>
+              <StyledTableCell align="right">4.31</StyledTableCell>
+              <StyledTableCell align="right">5</StyledTableCell>
+            </StyledTableRow>
+        </TableBody>
+          </Table>
+        </TableContainer>
+        </Grid>
+        <Grid item xs={12} sm={7} md={6}>
+          <Image src={Education} height={400} width={"100%"} alt="Hero Picture" />
+        </Grid>
+      </Grid>
     </div>
   );
 }
