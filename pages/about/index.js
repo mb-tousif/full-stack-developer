@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Typography, Box, Table,TableBody,TableContainer,TableHead, TableRow,Paper, Grid,styled } from "@mui/material";
+import { Typography, Box, Grid,styled } from "@mui/material";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
 import logo from "../../public/profile.png";
@@ -10,31 +10,6 @@ import skill2 from "../../public/hero-3.png";
 import Edu from "../../public/edu.png";
 import Education from "../../public/skills.png";
 import SkillBar from "react-skillbars";
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    textAlign: "center",
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 16,
-  },
-}));
-
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
-    fontSize: 12,
-    textAlign: "center",
-  },
-  // hide last border
-  '&:last-child td, &:last-child th': {
-    border: 0,
-  },
-}));
 
 export default function About() {
   const skills = [
@@ -253,44 +228,12 @@ export default function About() {
       </Box>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={5} md={6} sx={{margin:"auto"}}>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 550 }} aria-label="simple table">
-          <TableHead>
-          <TableRow>
-            <StyledTableCell>Institute</StyledTableCell>
-            <StyledTableCell align="right">Degree</StyledTableCell>
-            <StyledTableCell align="right">Result</StyledTableCell>
-            <StyledTableCell align="right">Out Of</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-                World University of Bangladesh
-              </StyledTableCell>
-              <StyledTableCell align="right">BBA Major in Finance</StyledTableCell>
-              <StyledTableCell align="right">3.26</StyledTableCell>
-              <StyledTableCell align="right">4</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-              Rajshahi Govt. City College
-              </StyledTableCell>
-              <StyledTableCell align="right">HSC</StyledTableCell>
-              <StyledTableCell align="right">3.5</StyledTableCell>
-              <StyledTableCell align="right">5</StyledTableCell>
-            </StyledTableRow>
-            <StyledTableRow>
-              <StyledTableCell component="th" scope="row">
-                Gunabati Multi-lateral High School
-              </StyledTableCell>
-              <StyledTableCell align="right">SSC</StyledTableCell>
-              <StyledTableCell align="right">4.31</StyledTableCell>
-              <StyledTableCell align="right">5</StyledTableCell>
-            </StyledTableRow>
-        </TableBody>
-          </Table>
-        </TableContainer>
+          <Typography sx={{
+              color: "#fff",
+              margin: { sm: "1rem" },
+              fontSize: { sm: "1rem", md: "1.2rem", xs: ".9rem" },
+              textAlign: "justify",
+            }}>I completed may Bachelor Degree in <b><i>World University Of Bangladesh</i></b>, where my major was Finance in BBA. I graduated with 3.26 CGPA out of 4. Besides a Business Study student I have dormant passion for Learning programing. After graduation, I successfully work different organization. But my strong passion and self taught ability push me here to make my dream true. I completed one web development course in <i>Programming Hero</i> which I completed in June 2022 in Six month learning process. After that I am continuously learn new things to be a software engineer. Now I am learning Python, Django and SQL. </Typography>
         </Grid>
         <Grid item xs={12} sm={7} md={6}>
           <Image src={Education} height={400} width={"100%"} alt="Hero Picture" />

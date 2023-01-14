@@ -1,4 +1,4 @@
-import { Typography, Box, Button } from "@mui/material";
+import { Typography, Box, Button, TextField, FormGroup } from "@mui/material";
 import Image from "next/image";
 import logo from "../public/my.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -8,8 +8,16 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { BsMedium } from "react-icons/bs";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { useForm } from "@formspree/react";
+import { MdOutgoingMail } from "react-icons/md";
+import feedback from "../public/feedback.png";
+import contact from "../public/contactMe.png";
+import { useState } from "react";
+import SendIcon from '@mui/icons-material/Send';
 
 export default function Home() {
+  const [state, handleSubmit] = useForm("mgedqyov");
+  const [error, showError] = useState(false);
   const [text] = useTypewriter({
     words: [
       " Web Developer",
@@ -22,6 +30,15 @@ export default function Home() {
     deleteSpeed: 200,
     delaySpeed: 900,
   });
+
+  if (state.succeeded) {
+    return (
+      <p className="text-xl font-semiBold text-center text-primary m-3">
+        Thanks for your Feedback!
+      </p>
+    );
+  }
+
   return (
     <div
       style={{
@@ -68,7 +85,7 @@ export default function Home() {
           >
             with experience in building scalable and responsive web
             applications. If you are looking for a skilled MERN stack web
-            developer, please feel free to check my resume and reach at me.
+            developer, feel free to check my resume and reach at me.
           </Typography>
           <div style={{ display: "flex", justifyContent: "space-around", width:"300px", margin:"auto", paddingBottom:"1.5rem" }}>
             <div>
@@ -142,6 +159,51 @@ export default function Home() {
           >
             <Image className={styles.hero} src={logo} alt="Hero Picture" />
           </motion.div>
+        </Box>
+      </Box>
+      <div
+        style={{
+          height: "6px",
+          background: "linear-gradient(90deg, #e4e7e4 0%, #0a1647 100%)",
+          margin: "1rem",
+          borderRadius: "10px",
+        }}
+      ></div>
+      <Box
+        sx={{
+          display: "flex",
+          color: "#fff",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <Typography sx={{fontSize:{sm:"2rem", md:"3rem", xs:"1.3"}}}>Drop Your Message</Typography>
+        <Image src={contact} height={80} alt="Hero Picture" />
+      </Box>
+      <Box sx={{display:{sm:"flex", justifyContent:"center"}}}>
+        <Image src={feedback}  alt="feedback"/>
+        <Box sx={{padding:{sm:"1rem", md:"1.5", xs:".5rem"}}}>
+          <FormGroup onSubmit={handleSubmit}>
+            <TextField sx={{margin:"1.2rem", display:"block", background:"initial"}} variant="outlined" type="text" label="Enter Your User Name"/>           
+            <TextField sx={{margin:"1.2rem",display:"block", background:"initial"}} variant="outlined" type="email"  label="Enter Your Email"/>
+            <TextField sx={{margin:"1.2rem",display:"block", background:"initial"}} multiline minRows={4} variant="outlined" type="text" label="Enter Your Email"/>
+            <Button type="submit" sx={{
+              background: "#103783",
+              color: "white",
+              marginLeft:"1.2rem",
+              textTransform: "capitalize",
+              border: "1px solid #2dbe6c",
+              margin: "20px 0px 10px 0px",
+              fontWeight: "600",
+              padding: "15px 0",
+              width: "80%",
+              ":hover": {
+                background: "#7c65a9",
+                border: "1px solid #2dbe6c"
+              },
+            }} variant="contained" endIcon={<SendIcon />}>Send</Button>
+          </FormGroup>
         </Box>
       </Box>
     </div>
