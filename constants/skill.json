@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "skill": "HTML",
+        "image": "/Skill/html.png"
+    },
+    {
+        "id": "2",
+        "skill": "CSS",
+        "image": "/Skill/css.png"
+    },
+    {
+        "id": "3",
+        "skill": "JavaScript",
+        "image": "/Skill/javascript.png"
+    },
+    {
+        "id": "4",
+        "skill": "React",
+        "image": "/Skill/react.png"
+    },
+    {
+        "id": "5",
+        "skill": "Node",
+        "image": "/Skill/node.png"
+    },
+    {
+        "id": "6",
+        "skill": "MongoDB",
+        "image": "/Skill/mongodb.png"
+    },
+    {
+        "id": "7",
+        "skill": "Bootstrap",
+        "image": "/Skill/bootstrap.png"
+    },
+    {
+        "id": "8",
+        "skill": "Tailwind CSS",
+        "image": "/Skill/tailwind.png"
+    },
+    {
+        "id": "9",
+        "skill": "Material UI",
+        "image": "/Skill/material-ui.png"
+    },
+    {
+        "id": "10",
+        "skill": "Firebase",
+        "image": "/Skill/firebase.png"
+    },
+    {
+        "id": "11",
+        "skill": "Heroku",
+        "image": "/Skill/heroku.png"
+    },
+    {
+        "id": "12",
+        "skill": "Netlify",
+        "image": "/Skill/netlify.png"
+    },
+    {
+        "id": "13",
+        "skill": "Git",
+        "image": "/Skill/github.png"
+    },
+    {
+        "id": "14",
+        "skill": "TypeScript",
+        "image": "/Skill/typescript.png"
+    },
+    {
+        "id": "15",
+        "skill": "Redux",
+        "image": "/Skill/redux.png"
+    },
+    {
+        "id": "16",
+        "skill": "next.js",
+        "image": "/Skill/next.png"
+    }
+]

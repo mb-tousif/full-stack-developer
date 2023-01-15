@@ -206,11 +206,13 @@ export default function About() {
         <SkillBar skills={skills} /> 
         </Grid>
       </Grid>
+
+      {/* Education Section */}
       <div
         style={{
           height: "6px",
           background: "linear-gradient(90deg,#247a4d 0%, #0c0c0c 100%)",
-          margin: "1.5rem",
+          margin: "1rem",
           borderRadius: "10px",
         }}
       ></div>

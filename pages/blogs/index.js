@@ -9,7 +9,12 @@ export default function Blogs() {
     }
   ]
   return (
-    <div>
+    <div 
+      style={{
+      background: "linear-gradient(90deg, #809b0e 0%, #aeb778 100%)",
+      padding: "1rem",
+      color: "#fff"
+    }}>
         <Typography variant='h3'>Blogs</Typography>
 
     </div>
