@@ -170,7 +170,7 @@ export default function Home() {
           marginBottom: "1.5rem",
         }}
       >
-        <Typography sx={{ fontSize: { sm: "2rem", md: "2.8rem", xs: "1.3" } }}>
+        <Typography sx={{ fontSize: { sm: "2rem", md: "2.8rem", xs: "1.6" } }}>
           / Skills
         </Typography>
         <Image src={skillHome} height={50} alt="Hero Picture" />
@@ -210,7 +210,7 @@ export default function Home() {
           marginBottom: "1.5rem",
         }}
       >
-        <Typography sx={{ fontSize: { sm: "2rem", md: "2.8rem", xs: "1.3" } }}>
+        <Typography sx={{ fontSize: { sm: "2rem", md: "2.8rem", xs: "1.6" } }}>
          / Get In Touch
         </Typography>
         <Image src={contact} height={50} alt="Hero Picture" />
