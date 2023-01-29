@@ -51,32 +51,27 @@
     },
     {
         "id": "11",
-        "skill": "Heroku",
-        "image": "/Skill/heroku.png"
-    },
-    {
-        "id": "12",
         "skill": "Netlify",
         "image": "/Skill/netlify.png"
     },
     {
-        "id": "13",
+        "id": "12",
         "skill": "Git",
         "image": "/Skill/github.png"
     },
     {
-        "id": "14",
+        "id": "13",
         "skill": "TypeScript",
         "image": "/Skill/typescript.png"
     },
     {
-        "id": "15",
+        "id": "14",
         "skill": "Redux",
         "image": "/Skill/redux.png"
     },
     {
-        "id": "16",
+        "id": "15",
         "skill": "next.js",
-        "image": "/Skill/next.png"
+        "image": "/Skill/next.jpeg"
     }
 ]

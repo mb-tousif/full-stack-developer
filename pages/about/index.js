@@ -199,10 +199,10 @@ export default function About() {
         <Image src={skill} height={80} alt="Hero Picture" />
       </Box>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={5} md={6} sx={{margin:"auto"}}>
+        <Grid item xs={2} sm={5} md={6} sx={{margin:"auto"}}>
           <Image src={skill2} height={400} width={"100%"} alt="Hero Picture" />
         </Grid>
-        <Grid item xs={12} sm={7} md={6}>
+        <Grid item xs={2} sm={7} md={6}>
         <SkillBar skills={skills} /> 
         </Grid>
       </Grid>

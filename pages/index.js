@@ -1,10 +1,18 @@
-import { Typography, Box, Button, Card, CardMedia, CardContent } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Button,
+  Card,
+  CardMedia,
+  CardContent
+} from "@mui/material";
 import Image from "next/image";
 import logo from "../public/my.png";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { BsMedium } from "react-icons/bs";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -14,6 +22,7 @@ import contact from "../public/contactMe.png";
 import skillHome from "../public/skillHome.png";
 import Marquee from "react-fast-marquee";
 import data from "../constants/skill.json";
+import Link from "next/link";
 
 export default function Home() {
   const [state, handleSubmit] = useForm("mgedqyov");
@@ -81,16 +90,33 @@ export default function Home() {
           <div
             style={{
               display: "flex",
-              justifyContent: "space-around",
+              justifyContent: "space-evenly",
               width: "300px",
               margin: "auto",
               paddingBottom: "1.5rem",
             }}
           >
-            <GitHubIcon className={styles.icon} />
-            <LinkedInIcon className={styles.icon} />
-            <BsMedium className={styles.icon} />
-            <TwitterIcon className={styles.icon} />
+            <Link href={"https://github.com/mb-tousif"} target="_blank">
+              <GitHubIcon className={styles.icon} />
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/merndevtousif"}
+              target="_blank"
+            >
+              <LinkedInIcon className={styles.icon} />
+            </Link>
+            <Link href={"https://twitter.com/my_dreams1990"} target="_blank">
+              <TwitterIcon className={styles.icon} />
+            </Link>
+            <Link
+              href={"https://medium.com/@programmer.decoder.2021"}
+              target="_blank"
+            >
+              <BsMedium className={styles.icon} />
+            </Link>
+            <Link href={"mailto:meta.block.tousif@gmail.com"}>
+              <ContactMailIcon className={styles.icon} />
+            </Link>
           </div>
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -138,9 +164,18 @@ export default function Home() {
           }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            whileHover={{
+              x: [10, 10, 0, 0],
+              y: [0, 10, 10, 0],
+              duration: 3,
+              backgroundColor: "#b5c6e099",
+              borderRadius: "70%",
+            }}
+            // animate={{
+            //   x: [40, 0, -10, 0],
+            //   y: [0, -40, 0, -10],
+            // }}
+            transition={{ duration: 3 }}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -175,21 +210,39 @@ export default function Home() {
         </Typography>
         <Image src={skillHome} height={50} alt="Hero Picture" />
       </Box>
-      <Marquee gradient={false} speed={80} pauseOnHover={true} pauseOnClick={true} delay={0} play={true} direction="left">
-        {
-          data.map((skill)=>(
-            <Card key={skill.id} sx={{ maxWidth: 345, background:"linear-gradient(90deg,#727a9a 0%, #0a1647 100%)", textAlign:"center", margin:"10px", boxShadow: "8px 8px 8px #211f2f", color:"#fff" }}>
+      <Marquee
+        gradient={false}
+        speed={80}
+        pauseOnHover={true}
+        pauseOnClick={true}
+        delay={0}
+        play={true}
+        direction="left"
+      >
+        {data.map((skill) => (
+          <Card
+            key={skill.id}
+            sx={{
+              maxWidth: 345,
+              background: "linear-gradient(90deg,#727a9a 0%, #0a1647 100%)",
+              textAlign: "center",
+              margin: "10px",
+              boxShadow: "8px 8px 8px #211f2f",
+              color: "#fff",
+            }}
+          >
             <CardMedia
               sx={{ height: 170, width: 200, margin: "auto" }}
               image={skill.image}
               title={skill.skill}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">{skill.skill}</Typography>
+              <Typography gutterBottom variant="h5" component="div">
+                {skill.skill}
+              </Typography>
             </CardContent>
-            </Card>
-          ))
-        }
+          </Card>
+        ))}
       </Marquee>
       {/* Get Touch With me */}
       <div
@@ -211,11 +264,18 @@ export default function Home() {
         }}
       >
         <Typography sx={{ fontSize: { sm: "2rem", md: "2.8rem", xs: "1.6" } }}>
-         / Get In Touch
+          / Get In Touch
         </Typography>
         <Image src={contact} height={50} alt="Hero Picture" />
       </Box>
-      <Box sx={{ display: { sm: "flex" }, justifyContent: "space-evenly" , margin: "auto", paddingBottom:"2rem" }}>
+      <Box
+        sx={{
+          display: { sm: "flex" },
+          justifyContent: "space-evenly",
+          margin: "auto",
+          paddingBottom: "2rem",
+        }}
+      >
         <Image width={350} src={feedback} alt="feedback" />
         <Box
           sx={{
