@@ -129,7 +129,7 @@ export default function About() {
               textAlign: "left",
             }}>
               Yes! I believe <br/>
-              in Continuous Learning
+              <span style={{color: "#7c65a9"}}>In Quality</span>
             </Typography>
           <Typography
             variant="h5"
@@ -158,6 +158,13 @@ export default function About() {
           >
             <Image src={signature} width={200} alt="Signature" />
           </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              margin: { sm: "1rem" },
+            }}
+          ><div style={{height:"2px", background:"linear-gradient(90deg, #1c1554 0%, #fff 50%, #7c65a9 100%)",width:"180px", marginRight:"10px"}}></div></Box>
         </Box>
         <motion.div
           initial={{
@@ -199,10 +206,10 @@ export default function About() {
         <Image src={skill} height={80} alt="Hero Picture" />
       </Box>
       <Grid container spacing={2}>
-        <Grid item xs={2} sm={5} md={6} sx={{margin:"auto"}}>
-          <Image src={skill2} height={400} width={"100%"} alt="Hero Picture" />
+        <Grid item xs={12} sm={5} md={6} sx={{margin:"auto"}}>
+          <Image src={skill2} className={styles.hero} alt="Hero Picture" />
         </Grid>
-        <Grid item xs={2} sm={7} md={6}>
+        <Grid item xs={12} sm={7} md={6}>
         <SkillBar skills={skills} /> 
         </Grid>
       </Grid>
@@ -238,7 +245,7 @@ export default function About() {
             }}>I completed may Bachelor Degree in <b><i>World University Of Bangladesh</i></b>, where my major was Finance in BBA. I graduated with 3.26 CGPA out of 4. Besides a Business Study student I have dormant passion for Learning programing. After graduation, I successfully work different organization. But my strong passion and self taught ability push me here to make my dream true. I completed one web development course in <i>Programming Hero</i> which I completed in June 2022 in Six month learning process. After that I am continuously learn new things to be a software engineer. Now I am learning Python, Django and SQL. </Typography>
         </Grid>
         <Grid item xs={12} sm={7} md={6}>
-          <Image src={Education} height={400} width={"100%"} alt="Hero Picture" />
+          <Image src={Education} className={styles.hero} alt="Hero Picture" />
         </Grid>
       </Grid>
     </div>

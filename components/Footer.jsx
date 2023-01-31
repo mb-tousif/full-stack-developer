@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Typography, styled } from "@mui/material";
+import Image from "next/image";
+import signature from "../public/signature.png";
 
 const CustomTitle = styled(Typography)(({ theme }) => ({
   fontFamily:"Satisfy",
@@ -26,7 +28,9 @@ const CustomCopyright = styled(Typography)(({ theme }) => ({
 export default function Footer(){
   return (
     <Box sx={{ background: "linear-gradient(90deg, #1c1554 0%,#7c65a9 50%, #103783 90%)",color: "#fff", padding: 2, textAlign:"center" }}>
-      <CustomTitle variant="h5">AZIZUL HAQUE TOUSIF</CustomTitle>
+      <Box>
+        <Image src={signature} width={200} alt="Signature" />
+      </Box>
       <CustomDesc variant="h6">MERN Stack Web Developer</CustomDesc>
       <CustomCopyright variant="body1">
         All right reserved & Copyright &#169; {new Date().getFullYear()}.
