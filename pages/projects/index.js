@@ -10,9 +10,11 @@ import {
   Typography,
 } from "@mui/material";
 import Link from "next/link";
+import { Box } from "@mui/system";
 
 const buttonStyle = {
   color: "#809b0e",
+  margin: { xs: "0 1.5px", sm: "0 3px", md: "0 6px" },
   textTransform: "none",
   border: "1px solid #e5e7ec",
   padding: "8px 0px",
@@ -53,18 +55,22 @@ export default function Projects() {
             md={4}
             sx={{ margin: "auto" }}
           >
-            <Card>
+            <Card sx={{background:"linear-gradient(to right, #0f2027, #203a43, #2c5364)"}}>
               <CardMedia
                 sx={{ height: 400, width: "100%", margin: "auto" }}
                 image={project.image}
                 title="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" color={"#fff"}>
                   {project.title}
+                </Typography>
+                <Typography variant="body2" color={"#fff"}>
+                  {project.description}
                 </Typography>
               </CardContent>
               <CardActions sx={{ margin: "auto" }}>
+                <Box sx={{margin:"auto"}}>
                 <Link href={project.liveSite} target="_blank">
                   <Button sx={buttonStyle}>liveSite</Button>
                 </Link>
@@ -74,6 +80,7 @@ export default function Projects() {
                 <Link href={project.githubServer} target="_blank">
                   <Button sx={buttonStyle}>Server Code</Button>
                 </Link>
+                </Box>
               </CardActions>
             </Card>
           </Grid>

@@ -1,7 +1,8 @@
 [
     {
         "id": "ABC",
-        "tittle": "Wholesale Fruits Warehouse",
+        "title": "Wholesale Fruits Warehouse",
+        "description": "A web application for products warehouse management where users can manage products inventory likes add, delivered, restock and delete items.",
         "liveSite": "https://fresh-fruits-21d86.web.app",
         "image":"/Projects/freshFruits3.png",
         "githubClient": "https://github.com/mb-tousif/Fruits-Warehouse",
@@ -9,7 +10,8 @@
     },
     {
         "id": "ABCD",
-        "tittle": "Online Study Platform",
+        "title": "Online Study Platform",
+        "description": "A web application for online study platform where users can learn online courses and can also manage their own courses.",
         "liveSite": "https://studywithscholar.netlify.app",
         "image":"/Projects/elearning3.png",
         "githubClient": "https://github.com/mb-tousif/eLearningClient",
@@ -17,7 +19,8 @@
     },
     {
         "id": "ABCDE",
-        "tittle": "Juice Bar Shop Site",
+        "title": "Juice Bar Shop Site",
+        "description": "A web application for juice bar shop where users can order their favorite juice and can also obtain relevant information about store and products.",
         "liveSite": "https://juice-bar2020.netlify.app",
         "image":"/Projects/juiceBar3.png",
         "githubClient": "https://github.com/mb-tousif/Juice-Bar",

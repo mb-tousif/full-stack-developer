@@ -127,6 +127,7 @@ export default function Home() {
               justifyContent: "center",
             }}
           >
+            <Link href="https://drive.google.com/file/d/1nBjzw6h-Z-YMBYvJ41V6AuOLBlQhZezh/view?usp=sharing" target="_blank">
             <Button
               sx={{
                 color: "#809b0e",
@@ -151,6 +152,7 @@ export default function Home() {
             >
               Resume
             </Button>
+            </Link>
           </motion.div>
         </Box>
         <Box
@@ -171,10 +173,6 @@ export default function Home() {
               backgroundColor: "#b5c6e099",
               borderRadius: "70%",
             }}
-            // animate={{
-            //   x: [40, 0, -10, 0],
-            //   y: [0, -40, 0, -10],
-            // }}
             transition={{ duration: 3 }}
             style={{
               display: "flex",
