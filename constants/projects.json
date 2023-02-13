@@ -4,7 +4,7 @@
         "title": "Wholesale Fruits Warehouse",
         "description": "A web application for products warehouse management where users can manage products inventory likes add, delivered, restock and delete items.",
         "liveSite": "https://fresh-fruits-21d86.web.app",
-        "image":"/Projects/freshFruits3.png",
+        "image":"/Projects/freshFruits1.png",
         "githubClient": "https://github.com/mb-tousif/Fruits-Warehouse",
         "githubServer": "https://github.com/mb-tousif/Fruits-Warehouse-Server"
     },
@@ -22,7 +22,7 @@
         "title": "Juice Bar Shop Site",
         "description": "A web application for juice bar shop where users can order their favorite juice and can also obtain relevant information about store and products.",
         "liveSite": "https://juice-bar2020.netlify.app",
-        "image":"/Projects/juiceBar3.png",
+        "image":"/Projects/juiceBar1.png",
         "githubClient": "https://github.com/mb-tousif/Juice-Bar",
         "githubServer": "https://github.com/mb-tousif/juice-bar-server"
     }

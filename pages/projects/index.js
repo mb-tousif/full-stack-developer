@@ -57,7 +57,10 @@ export default function Projects() {
           >
             <Card sx={{background:"linear-gradient(to right, #0f2027, #203a43, #2c5364)"}}>
               <CardMedia
-                sx={{ height: 400, width: "100%", margin: "auto" }}
+                sx={{ height: 400, width: "100%", margin: "auto",
+                position: "relative",
+                backgroundPosition: "top",
+                transition: "3s", "&:hover": { backgroundPosition: "bottom" }}}
                 image={project.image}
                 title="green iguana"
               />
