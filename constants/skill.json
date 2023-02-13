@@ -30,6 +30,11 @@
         "image": "/Skill/mongodb.png"
     },
     {
+        "id": "16",
+        "skill": "Mongoose",
+        "image": "/Skill/mongoose.png"
+    },
+    {
         "id": "7",
         "skill": "Bootstrap",
         "image": "/Skill/bootstrap.png"

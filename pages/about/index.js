@@ -102,11 +102,19 @@ export default function About() {
       },
     },
     {
-      type: "Mongo DB",
+      type: "MongoDB",
       level: 80,
       color: {
         bar: "linear-gradient(90deg, #0f971c 40%, #1c3e35 80%, #ffffff 100%)",
         title: { text: "#fff", background: "#2a8d08" },
+      },
+    },
+    {
+      type: "Mongoose ODM",
+      level: 80,
+      color: {
+        bar: "linear-gradient(90deg, #880000 80%, #ffffff 100%)",
+        title: { text: "#fff", background: "#880000" },
       },
     },
   ];
