@@ -110,7 +110,7 @@ export default function About() {
       },
     },
     {
-      type: "Mongoose ODM",
+      type: "Mongoose",
       level: 80,
       color: {
         bar: "linear-gradient(90deg, #880000 80%, #ffffff 100%)",
